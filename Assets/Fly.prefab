@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1602444177502326806}
   - component: {fileID: 1602444177502326807}
   - component: {fileID: 1602444177502326808}
+  - component: {fileID: 50343659}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1602444177502326806
 SpriteRenderer:
@@ -177,3 +178,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fccc004d4b7014e42b86f0784fba82c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxFliesPerLevel: 5
+--- !u!114 &50343659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544602348562725466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25cf3fc2fb8387046a9563ef5367a4ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
+  objectPrefabs: []
+  flyProbability: 0.2
+  maxObject: 5
+  spawnInterval: 0.5
