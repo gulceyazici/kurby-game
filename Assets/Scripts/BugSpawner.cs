@@ -11,7 +11,7 @@ public class BugSpawner : MonoBehaviour
     public Tilemap tilemap;
     public GameObject[] objectPrefabs;
     public float flyProbability = 0.2f;
-    public int maxObject = 5;
+    [SerializeField] public int maxObject;
     public float spawnInterval = 0.5f;
 
     private List<Vector3> validSpawnPositions = new List<Vector3>();
@@ -129,11 +129,6 @@ public class BugSpawner : MonoBehaviour
             {
                 spawnObjects.Add(gameObject);
                 spawnCount++;
-            }
-            else
-            {
-                //finish the level
-
             }
         }
     }

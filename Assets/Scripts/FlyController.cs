@@ -6,19 +6,6 @@ public class FlyController : MonoBehaviour
 {
     public static int fliesEaten = 0;
     public int maxFliesPerLevel = 5;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Kurby"))
