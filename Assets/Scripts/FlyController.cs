@@ -5,7 +5,16 @@ using UnityEngine;
 public class FlyController : MonoBehaviour
 {
     public static int fliesEaten = 0;
-    public int maxFliesPerLevel = 5;
+    [SerializeField] public int maxFliesPerLevel;
+    [SerializeField] private GameObject teleportObject;
+
+    private void Start()
+    {
+        if(teleportObject != null)
+        {
+            teleportObject.SetActive(false);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Kurby"))
@@ -20,6 +29,7 @@ public class FlyController : MonoBehaviour
                 if (fliesEaten >= maxFliesPerLevel)
                 {
                     Debug.Log("Reached max flies eaten for this level.");
+                    teleportObject.SetActive(true);
                 }
             }
             else
