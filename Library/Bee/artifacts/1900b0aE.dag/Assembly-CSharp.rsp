@@ -386,6 +386,7 @@
 "Assets/Scripts/CharacterController2D.cs"
 "Assets/Scripts/FlyController.cs"
 "Assets/Scripts/LabeledTiles.cs"
+"Assets/Scripts/ObstacleController.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/SceneController.cs"
 "Assets/Scripts/Score.cs"

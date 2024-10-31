@@ -18,6 +18,7 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+	private Vector2 startPos;
 
 	[Header("Events")]
 	[Space]
@@ -40,8 +41,12 @@ public class CharacterController2D : MonoBehaviour
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
 	}
+    private void Start()
+    {
+        startPos = transform.position;
+    }
 
-	private void FixedUpdate()
+    private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -142,5 +147,20 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Obstacle"))
+		{
+			Die();
+		}
+    }
+	private void Die()
+	{
+		Respawn();
+	}
+	private void Respawn()
+	{
+		transform.position = startPos;
 	}
 }

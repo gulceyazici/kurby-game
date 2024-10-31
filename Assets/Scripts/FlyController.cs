@@ -43,5 +43,6 @@ public class FlyController : MonoBehaviour
     public static void ResetFlyCounter()
     {
         fliesEaten = 0;
+        Score.score = 0;
     }
 }

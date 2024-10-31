@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Kurby
+  - Obstacle
   layers:
   - Default
   - TransparentFX
